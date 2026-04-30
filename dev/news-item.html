@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="date=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="format-detection" content="email=no">
+	<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /> -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+
+	<title>SEKAR</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!-- Favicon -->
+	<!-- <link rel="icon" href="img/fav.png" type="image/x-icon">
+	<link rel="shortcut icon" href="img/fav.png" type="image/x-icon"> -->
+	<!-- OG -->
+	<meta property="og:locale" content="ru-Ru">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=PT+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vjik/arcticModal@master/arcticmodal/jquery.arcticmodal.css">
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+
+<body>
+	<div class="body-wrap page">
+		<div class="menu">
+			<button class="back">
+				<img src="img/back.svg" alt="" class="svg">
+				Меню
+			</button>
+			<ul class="nav__list">
+				<li>
+					<a href="#">
+						Каталог
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						О компании
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Новости
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Контакты
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="menu2">
+			<button class="close">
+				<img src="img/close.svg" alt="" class="svg">
+			</button>
+			<div class="order__top">
+				<div class="order__area">
+					<h2>
+						Комерческое <br> предложение
+					</h2>
+					<p>
+						Заполните краткую форму и мы оперативно <br> свяжемся с вами.
+					</p>
+				</div>
+				<form action="success.php" class="order__form js-form" id="popupResult" method="post">
+					<input type="text" placeholder="Как вас зовут?" class="form__field" required="" name="name">
+					<input type="tel" placeholder="Ваш номер телефона" class="form__field tel" required="" name="tel">
+					<button class="btn" data-submit>
+						Перезвонить мне
+					</button>
+				</form>
+			</div>
+		</div>
+		<div class="overlay"></div>
+		<header class="header" id="header">
+			<nav class="nav">
+				<div class="container">
+					<div class="nav__box q">
+						<a href="main.html" class="nav__logo">
+							<img src="img/logo2.svg" alt="">
+						</a>
+						<ul class="nav__list">
+							<li>
+								<a href="#">
+									Каталог
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									О компании
+								</a>
+							</li>
+							<li class="active">
+								<a href="#">
+									Новости
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Контакты
+								</a>
+							</li>
+						</ul>
+						<div class="menu-btn"></div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		
+		<section class="exp sec news-item" id="news-item">
+			<div class="container">
+				<div class="bread">
+					<a href="#">
+						Главная
+					</a>
+					<a href="#">
+						Новости
+					</a>
+					<p>
+						Статья
+					</p>
+				</div>
+				<div class="exp__wrap policy__wrap">
+					<img src="img/line5.svg" alt="" class="main__fig1">
+				
+					<div class="news-item__top">
+						<img src="img/n-it.png" alt="" class="news-item__pic">
+						<div class="news-item__info">
+							<p>
+								Автор: Алексей Колюжный
+							</p>
+							<div class="news-item__num">
+								369 <img src="img/eye.svg" alt="">
+							</div>
+							<div class="news-item__num">
+								23.03.2026
+							</div>
+						</div>
+					</div>
+					<article>
+						<h1>
+							Какие инструменты используються в современной хирургии
+						</h1>
+						<p>
+							Правильный выбор хирургических инструментов залог успешной операции, безопасности пациента и комфорта работы хирурга. Разберём ключевые аспекты выбора детально.
+						</p>
+						<h2>
+							Классификация по назначению
+						</h2>
+						<ul class="policy__list">
+							<li>
+								Общего назначения — универсальные, используются в большинстве операций
+							</li>
+							<li>
+								Специальные для узкоспециализированных вмешательств (офтальмология, нейрохирургия, стоматология и т. д.).
+							</li>
+						</ul>
+						<h2>
+							Основные категории по функциям
+						</h2>
+						<ul class="policy__list">
+							<li>
+								Режущие: скальпели (разных форм и размеров), хирургические ножницы (прямые, изогнутые), пилы, остеотомы, долота.
+							</li>
+							<li>
+								Зажимные: кровоостанавливающие зажимы (Бильрота, Кохера, «москит»), пинцеты (анатомические, хирургические), жомы.
+							</li>
+							<li>
+								Расширяющие: ранорасширители, крючки (тупые и острые), зеркала.
+							</li>
+						</ul>
+						<p>
+							Вывод: выбор хирургических инструментов требует комплексного подхода. Учитывайте назначение, материал, качество изготовления, эргономику и специфику операций. Инвестиция в надёжные инструменты окупается безопасностью пациентов, комфортом работы и долговечностью оборудования.
+						</p>
+					</article>
+				</div>
+			</div>
+		</section>
+		<section class="art" id="art">
+			<div class="container">
+				<div class="team__wrap">
+					<div class="team__top q">
+						<h2>
+							Другие статьи
+						</h2>
+						<div class="arrows">
+							<div class="swiper-button-prev4 arrow">
+								<img src="img/left.svg" alt="" class="svg">
+							</div>
+							<div class="swiper-button-next4 arrow">
+								<img src="img/right.svg" alt="" class="svg">
+							</div>
+						</div>
+					</div>
+					<div class="swiper4">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<a href="#" class="news__item">
+									<div>
+										<img src="img/news1.png" alt="">
+									</div>
+									<p>
+										Новые технологии <br> в медецине
+									</p>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" class="news__item">
+									<div>
+										<img src="img/news2.png" alt="">
+									</div>
+									<p>
+										Как правильно выбрать хирургические ножницы
+									</p>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" class="news__item">
+									<div>
+										<img src="img/news3.png" alt="">
+									</div>
+									<p>
+										Какие инструменты используються в современной хирургии
+									</p>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" class="news__item">
+									<div>
+										<img src="img/news1.png" alt="">
+									</div>
+									<p>
+										Новые технологии <br> в медецине
+									</p>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" class="news__item">
+									<div>
+										<img src="img/news2.png" alt="">
+									</div>
+									<p>
+										Как правильно выбрать хирургические ножницы
+									</p>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#" class="news__item">
+									<div>
+										<img src="img/news3.png" alt="">
+									</div>
+									<p>
+										Какие инструменты используються в современной хирургии
+									</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer" id="footer">
+			<div class="container">
+				<div class="footer__row q">
+					<div class="footer__area">
+						<img src="img/f-logo1.svg" alt="">
+						<img src="img/f-logo2.svg" alt="">
+					</div>
+					<div class="footer__content">
+						<div class="footer__item">
+							<p>
+								Телефон поддержки
+							</p>
+							<a href="tel:+79524442434">
+								+7 (952) 444-24-34
+							</a>
+						</div>
+						<div class="footer__item">
+							<p>
+								Telegram
+							</p>
+							<a href="https://t.me/Secarsupport" target="_blank">
+								T.me: Secarsupport
+							</a>
+						</div>
+						<div class="footer__item">
+							<p>
+								Почтовый ящик
+							</p>
+							<a href="mailto:info@sekar-st.ru">
+								info@sekar-st.ru
+							</a>
+						</div>
+						<div class="footer__item">
+							<p>
+								Max
+							</p>
+							<a href="max://chat/Secarsupport" target="_blank">
+								Secarsupport
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__flex q">
+					<a href="https://gasfort.ru/" class="footer__com" target="_blank">
+						<img src="img/com.svg" alt="">
+						<p>
+							Разработка <br> сайтов
+						</p>
+					</a>
+					<ul class="nav__list">
+						<li>
+							<a href="#">
+								Каталог
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								О компании
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Новости
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Контакты
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__bottom q">
+					<p>
+						Секар гроуп 2026 все права защищены
+					</p>
+					<div>
+						<a href="#" target="_blank">
+							Политика конфиденциальности
+						</a>
+						<a href="#" target="_blank">
+							Пользовательское соглашение
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<a href="#header" class="go_to up">
+			<img src="img/up.svg" alt="" class="svg">
+		</a>
+	</div>
+	<script type="text/javascript">
+		ymaps.ready(init);
+
+		function init() {
+			var myMap = new ymaps.Map("map", {
+				// Центр карты, указываем коордианты
+				center: [55.807602, 37.635422],
+				// Масштаб, тут все просто
+				zoom: 14,
+				// Отключаем все элементы управления
+				controls: []
+			});
+
+			var myGeoObjects = [];
+
+			// Наша метка, указываем коордианты
+			myGeoObjects = new ymaps.Placemark([55.807602, 37.635422], {
+				balloonContentBody: 'BETON',
+			}, {
+				iconLayout: 'default#image',
+				// Путь до нашей картинки
+				iconImageHref: 'img/map.svg',
+				// Размер по ширине и высоте
+				iconImageSize: [74, 74],
+				// Смещение левого верхнего угла иконки относительно
+				// её «ножки» (точки привязки).
+				iconImageOffset: [-35, -35]
+			});
+
+			var clusterer = new ymaps.Clusterer({
+				clusterDisableClickZoom: false,
+				clusterOpenBalloonOnClick: false,
+			});
+
+			clusterer.add(myGeoObjects);
+			myMap.geoObjects.add(clusterer);
+			// Отлючаем возможность изменения масштаба
+			myMap.behaviors.disable('scrollZoom');
+
+		}
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js?ver=5.1"></script>
+	<script src="js/all.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/vjik/arcticModal@master/arcticmodal/jquery.arcticmodal.js"></script>
+	<!-- Подключен файл-валидатор, для проверки формы на заполненность  -->
+	<script type="text/javascript"
+		src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+</body>
+
+</html>

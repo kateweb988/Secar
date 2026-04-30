@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="date=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="format-detection" content="email=no">
+	<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /> -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+
+	<title>SEKAR</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!-- Favicon -->
+	<!-- <link rel="icon" href="img/fav.png" type="image/x-icon">
+	<link rel="shortcut icon" href="img/fav.png" type="image/x-icon"> -->
+	<!-- OG -->
+	<meta property="og:locale" content="ru-Ru">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=PT+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vjik/arcticModal@master/arcticmodal/jquery.arcticmodal.css">
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+
+<body>
+	<div class="body-wrap page">
+		<div class="menu">
+			<button class="back">
+				<img src="img/back.svg" alt="" class="svg">
+				Меню
+			</button>
+			<ul class="nav__list">
+				<li>
+					<a href="#">
+						Каталог
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						О компании
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Новости
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Контакты
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="menu2">
+			<button class="close">
+				<img src="img/close.svg" alt="" class="svg">
+			</button>
+			<div class="order__top">
+				<div class="order__area">
+					<h2>
+						Комерческое <br> предложение
+					</h2>
+					<p>
+						Заполните краткую форму и мы оперативно <br> свяжемся с вами.
+					</p>
+				</div>
+				<form action="success.php" class="order__form js-form" id="popupResult" method="post">
+					<input type="text" placeholder="Как вас зовут?" class="form__field" required="" name="name">
+					<input type="tel" placeholder="Ваш номер телефона" class="form__field tel" required="" name="tel">
+					<button class="btn" data-submit>
+						Перезвонить мне
+					</button>
+				</form>
+			</div>
+		</div>
+		<div class="overlay"></div>
+		<header class="header" id="header">
+			<nav class="nav">
+				<div class="container">
+					<div class="nav__box q">
+						<a href="main.html" class="nav__logo">
+							<img src="img/logo2.svg" alt="">
+						</a>
+						<ul class="nav__list">
+							<li class="active">
+								<a href="#">
+									Каталог
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									О компании
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Новости
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Контакты
+								</a>
+							</li>
+						</ul>
+						<div class="menu-btn"></div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<section class="exp sec catalog" id="catalog">
+			<div class="container">
+				<div class="bread">
+					<a href="#">
+						Главная
+					</a>
+					<p>
+						Каталог
+					</p>
+				</div>
+				<div class="catalog__wrap">
+					<img src="img/line5.svg" alt="" class="main__fig1">
+					<div class="tabs">
+						<div class="tabs__nav d-flex">
+							<a href="#" class="tabs__btn tabs__btn_active active">
+								<p>
+									Генератор
+								</p>
+								<span>
+									1 товар
+								</span>
+								<img src="img/cat1.png" alt="">
+							</a>
+							<a href="#" class="tabs__btn">
+								<p>
+									Скальпели
+								</p>
+								<span>
+									1 товар
+								</span>
+								<img src="img/cat2.png" alt="">
+							</a>
+							<a href="#" class="tabs__btn">
+								<p>
+									Ножницы
+								</p>
+								<span>
+									4 товара
+								</span>
+								<img src="img/cat3.png" alt="">
+							</a>
+							<a href="#" class="tabs__btn">
+								<p>
+									Преобразователи
+								</p>
+								<span>
+									2 товара
+								</span>
+								<img src="img/cat4.png" alt="">
+							</a>
+						</div>
+						<div class="tabs__content">
+
+							<!-- TAB 1 -->
+							<div class="tabs__pane tabs__pane_show">
+								<h1>
+									Генератор <span>/1 товар</span>
+								</h1>
+
+								<div class="catalog__box q">
+
+									<div class="catalog__item">
+										<div class="catalog__top">
+											<div class="swiper catalog-swiper">
+												<div class="swiper-wrapper">
+
+												<div class="swiper-slide">
+													<img src="img/item1.png" alt="">
+												</div>
+
+												<div class="swiper-slide">
+													<img src="img/item1.png" alt="">
+												</div>
+
+												<div class="swiper-slide">
+													<img src="img/item1.png" alt="">
+												</div>
+
+												</div>
+
+												<div class="swiper-pagination"></div>
+											</div>
+											<div class="arrow swiper-button-prev">
+												<img src="img/left.svg" alt="" class="svg">
+											</div>
+											<div class="arrow swiper-button-next">
+												<img src="img/right.svg" alt="" class="svg">
+											</div>
+										</div>
+										<div class="catalog__info">
+
+											<p class="catalog__title">
+												TР100
+											</p>
+
+											<div class="catalog__row">
+												<p>
+													Хирургический преобразователь
+												</p>
+											</div>
+
+											<div class="catalog__row">
+												<p>
+													Рабочая чистота
+												</p>
+												<p>
+													55,5 КГц
+												</p>
+											</div>
+
+											<div class="catalog__row">
+												<p>
+													Универсальный разъем
+												</p>
+												<p>
+													наличие
+												</p>
+											</div>
+
+										</div>
+										<a href="#" class="catalog__btn btn">
+											Запросить КП
+										</a>
+									</div>
+									<div class="catalog__item">
+										<div class="catalog__top">
+											<div class="swiper catalog-swiper">
+												<div class="swiper-wrapper">
+
+												<div class="swiper-slide">
+													<img src="img/item2.png" alt="">
+												</div>
+
+												<div class="swiper-slide">
+													<img src="img/item2.png" alt="">
+												</div>
+
+												<div class="swiper-slide">
+													<img src="img/item2.png" alt="">
+												</div>
+
+												</div>
+
+												<div class="swiper-pagination"></div>
+											</div>
+											<div class="arrow swiper-button-prev">
+												<img src="img/left.svg" alt="" class="svg">
+											</div>
+											<div class="arrow swiper-button-next">
+												<img src="img/right.svg" alt="" class="svg">
+											</div>
+										</div>
+										<div class="catalog__info">
+
+											<p class="catalog__title">
+												TР100
+											</p>
+
+											<div class="catalog__row">
+												<p>
+													Хирургический преобразователь
+												</p>
+											</div>
+
+											<div class="catalog__row">
+												<p>
+													Рабочая чистота
+												</p>
+												<p>
+													55,5 КГц
+												</p>
+											</div>
+
+											<div class="catalog__row">
+												<p>
+													Универсальный разъем
+												</p>
+												<p>
+													наличие
+												</p>
+											</div>
+											<div class="catalog__row">
+												<p>
+													Характеристика три
+												</p>
+												<p>
+													2700 оборотов/мин
+												</p>
+											</div>
+										</div>
+										<a href="#" class="catalog__btn btn">
+											Запросить КП
+										</a>
+									</div>
+								</div>
+							</div>
+
+
+							<!-- TAB 2 -->
+							<div class="tabs__pane">
+								<h1>
+								Скальпели <span>/2 товара</span>
+								</h1>
+
+								<div class="catalog__box q">
+
+									<div class="catalog__item">
+
+									<div class="catalog__top">
+
+									<div class="swiper catalog-swiper">
+										<div class="swiper-wrapper">
+
+										<div class="swiper-slide">
+											<img src="img/item1.png" alt="">
+										</div>
+
+										<div class="swiper-slide">
+											<img src="img/item1.png" alt="">
+										</div>
+
+										<div class="swiper-slide">
+											<img src="img/item1.png" alt="">
+										</div>
+
+										</div>
+
+										<div class="swiper-pagination"></div>
+									</div>
+
+									<div class="arrow swiper-button-prev">
+										<img src="img/left.svg" alt="" class="svg">
+									</div>
+
+									<div class="arrow swiper-button-next">
+										<img src="img/right.svg" alt="" class="svg">
+									</div>
+
+									</div>
+
+									<div class="catalog__info">
+
+									<p class="catalog__title">
+										TР100
+									</p>
+
+									<div class="catalog__row">
+										<p>
+										Хирургический преобразователь
+										</p>
+									</div>
+
+									<div class="catalog__row">
+										<p>
+										Рабочая чистота
+										</p>
+										<p>
+										55,5 КГц
+										</p>
+									</div>
+
+									<div class="catalog__row">
+										<p>
+										Универсальный разъем
+										</p>
+										<p>
+										наличие
+										</p>
+									</div>
+
+									</div>
+
+									<a href="#" class="catalog__btn btn">
+									Запросить КП
+									</a>
+
+									</div>
+
+								</div>
+							</div>
+
+
+							<!-- TAB 3 -->
+							<div class="tabs__pane">
+								<h1>
+								Ножницы <span>/2 товара</span>
+								</h1>
+
+								<div class="catalog__box q">
+
+									<div class="catalog__item">
+										<div class="catalog__top">
+											<div class="swiper catalog-swiper">
+												<div class="swiper-wrapper">
+
+												<div class="swiper-slide">
+													<img src="img/item1.png" alt="">
+												</div>
+
+												<div class="swiper-slide">
+													<img src="img/item1.png" alt="">
+												</div>
+
+												<div class="swiper-slide">
+													<img src="img/item1.png" alt="">
+												</div>
+
+												</div>
+
+												<div class="swiper-pagination"></div>
+											</div>
+											<div class="arrow swiper-button-prev">
+												<img src="img/left.svg" alt="" class="svg">
+											</div>
+											<div class="arrow swiper-button-next">
+												<img src="img/right.svg" alt="" class="svg">
+											</div>
+										</div>
+										<div class="catalog__info">
+
+											<p class="catalog__title">
+												TР100
+											</p>
+
+											<div class="catalog__row">
+												<p>
+													Хирургический преобразователь
+												</p>
+											</div>
+
+											<div class="catalog__row">
+												<p>
+													Рабочая чистота
+												</p>
+												<p>
+													55,5 КГц
+												</p>
+											</div>
+
+											<div class="catalog__row">
+												<p>
+													Универсальный разъем
+												</p>
+												<p>
+													наличие
+												</p>
+											</div>
+
+										</div>
+										<a href="#" class="catalog__btn btn">
+											Запросить КП
+										</a>
+									</div>
+									<div class="catalog__item">
+										<div class="catalog__top">
+											<div class="swiper catalog-swiper">
+												<div class="swiper-wrapper">
+
+												<div class="swiper-slide">
+													<img src="img/item2.png" alt="">
+												</div>
+
+												<div class="swiper-slide">
+													<img src="img/item2.png" alt="">
+												</div>
+
+												<div class="swiper-slide">
+													<img src="img/item2.png" alt="">
+												</div>
+
+												</div>
+
+												<div class="swiper-pagination"></div>
+											</div>
+											<div class="arrow swiper-button-prev">
+												<img src="img/left.svg" alt="" class="svg">
+											</div>
+											<div class="arrow swiper-button-next">
+												<img src="img/right.svg" alt="" class="svg">
+											</div>
+										</div>
+										<div class="catalog__info">
+
+											<p class="catalog__title">
+												TР100
+											</p>
+
+											<div class="catalog__row">
+												<p>
+													Хирургический преобразователь
+												</p>
+											</div>
+
+											<div class="catalog__row">
+												<p>
+													Рабочая чистота
+												</p>
+												<p>
+													55,5 КГц
+												</p>
+											</div>
+
+											<div class="catalog__row">
+												<p>
+													Универсальный разъем
+												</p>
+												<p>
+													наличие
+												</p>
+											</div>
+											<div class="catalog__row">
+												<p>
+													Характеристика три
+												</p>
+												<p>
+													2700 оборотов/мин
+												</p>
+											</div>
+										</div>
+										<a href="#" class="catalog__btn btn">
+											Запросить КП
+										</a>
+									</div>
+								</div>
+							</div>
+
+
+							<!-- TAB 4 -->
+							<div class="tabs__pane">
+								<h1>
+									Преобразователи <span>/2 товара</span>
+								</h1>
+
+								<div class="catalog__box q">
+
+									<div class="catalog__item">
+
+									<div class="catalog__top">
+
+									<div class="swiper catalog-swiper">
+										<div class="swiper-wrapper">
+
+										<div class="swiper-slide">
+											<img src="img/item1.png" alt="">
+										</div>
+
+										<div class="swiper-slide">
+											<img src="img/item1.png" alt="">
+										</div>
+
+										<div class="swiper-slide">
+											<img src="img/item1.png" alt="">
+										</div>
+
+										</div>
+
+										<div class="swiper-pagination"></div>
+									</div>
+
+									<div class="arrow swiper-button-prev">
+										<img src="img/left.svg" alt="" class="svg">
+									</div>
+
+									<div class="arrow swiper-button-next">
+										<img src="img/right.svg" alt="" class="svg">
+									</div>
+
+									</div>
+
+									<div class="catalog__info">
+
+									<p class="catalog__title">
+										TР100
+									</p>
+
+									<div class="catalog__row">
+										<p>
+										Хирургический преобразователь
+										</p>
+									</div>
+
+									<div class="catalog__row">
+										<p>
+										Рабочая чистота
+										</p>
+										<p>
+										55,5 КГц
+										</p>
+									</div>
+
+									<div class="catalog__row">
+										<p>
+										Универсальный разъем
+										</p>
+										<p>
+										наличие
+										</p>
+									</div>
+
+									</div>
+
+									<a href="#" class="catalog__btn btn">
+									Запросить КП
+									</a>
+
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer" id="footer">
+			<div class="container">
+				<div class="footer__row q">
+					<div class="footer__area">
+						<img src="img/f-logo1.svg" alt="">
+						<img src="img/f-logo2.svg" alt="">
+					</div>
+					<div class="footer__content">
+						<div class="footer__item">
+							<p>
+								Телефон поддержки
+							</p>
+							<a href="tel:+79524442434">
+								+7 (952) 444-24-34
+							</a>
+						</div>
+						<div class="footer__item">
+							<p>
+								Telegram
+							</p>
+							<a href="https://t.me/Secarsupport" target="_blank">
+								T.me: Secarsupport
+							</a>
+						</div>
+						<div class="footer__item">
+							<p>
+								Почтовый ящик
+							</p>
+							<a href="mailto:info@sekar-st.ru">
+								info@sekar-st.ru
+							</a>
+						</div>
+						<div class="footer__item">
+							<p>
+								Max
+							</p>
+							<a href="max://chat/Secarsupport" target="_blank">
+								Secarsupport
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__flex q">
+					<a href="https://gasfort.ru/" class="footer__com" target="_blank">
+						<img src="img/com.svg" alt="">
+						<p>
+							Разработка <br> сайтов
+						</p>
+					</a>
+					<ul class="nav__list">
+						<li>
+							<a href="#">
+								Каталог
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								О компании
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Новости
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Контакты
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer__bottom q">
+					<p>
+						Секар гроуп 2026 все права защищены
+					</p>
+					<div>
+						<a href="#" target="_blank">
+							Политика конфиденциальности
+						</a>
+						<a href="#" target="_blank">
+							Пользовательское соглашение
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<a href="#header" class="go_to up">
+			<img src="img/up.svg" alt="" class="svg">
+		</a>
+	</div>
+	<script type="text/javascript">
+		ymaps.ready(init);
+
+		function init() {
+			var myMap = new ymaps.Map("map", {
+				// Центр карты, указываем коордианты
+				center: [55.807602, 37.635422],
+				// Масштаб, тут все просто
+				zoom: 14,
+				// Отключаем все элементы управления
+				controls: []
+			});
+
+			var myGeoObjects = [];
+
+			// Наша метка, указываем коордианты
+			myGeoObjects = new ymaps.Placemark([55.807602, 37.635422], {
+				balloonContentBody: 'BETON',
+			}, {
+				iconLayout: 'default#image',
+				// Путь до нашей картинки
+				iconImageHref: 'img/map.svg',
+				// Размер по ширине и высоте
+				iconImageSize: [74, 74],
+				// Смещение левого верхнего угла иконки относительно
+				// её «ножки» (точки привязки).
+				iconImageOffset: [-35, -35]
+			});
+
+			var clusterer = new ymaps.Clusterer({
+				clusterDisableClickZoom: false,
+				clusterOpenBalloonOnClick: false,
+			});
+
+			clusterer.add(myGeoObjects);
+			myMap.geoObjects.add(clusterer);
+			// Отлючаем возможность изменения масштаба
+			myMap.behaviors.disable('scrollZoom');
+
+		}
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js?ver=5.1"></script>
+	<script src="js/all.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/vjik/arcticModal@master/arcticmodal/jquery.arcticmodal.js"></script>
+	<!-- Подключен файл-валидатор, для проверки формы на заполненность  -->
+	<script type="text/javascript"
+		src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="date=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="format-detection" content="email=no">
+	<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /> -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+
+	<title>SEKAR</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!-- Favicon -->
+	<!-- <link rel="icon" href="img/fav.png" type="image/x-icon">
+	<link rel="shortcut icon" href="img/fav.png" type="image/x-icon"> -->
+	<!-- OG -->
+	<meta property="og:locale" content="ru-Ru">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=PT+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/vjik/arcticModal@master/arcticmodal/jquery.arcticmodal.css">
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+
+<body>
+	<div class="body-wrap">
+		<div class="thanks">
+			<div class="container">
+				<div class="thanks__row q">
+					<div class="thanks__content">
+						<img src="img/thanks.svg" alt="">
+						<img src="img/thanks2.svg" alt="">
+						<h1>
+							Спасибо
+						</h1>
+						<p>
+							Скоро наши специалисты примут вашу заявку и <br> свяжуться с вами.
+						</p>
+					</div>
+					<a href="main.html" class="thanks__btn btn">
+						Вернуться на сайт
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		ymaps.ready(init);
+
+		function init() {
+			var myMap = new ymaps.Map("map", {
+				// Центр карты, указываем коордианты
+				center: [55.807602, 37.635422],
+				// Масштаб, тут все просто
+				zoom: 14,
+				// Отключаем все элементы управления
+				controls: []
+			});
+
+			var myGeoObjects = [];
+
+			// Наша метка, указываем коордианты
+			myGeoObjects = new ymaps.Placemark([55.807602, 37.635422], {
+				balloonContentBody: 'BETON',
+			}, {
+				iconLayout: 'default#image',
+				// Путь до нашей картинки
+				iconImageHref: 'img/map.svg',
+				// Размер по ширине и высоте
+				iconImageSize: [136, 136],
+				// Смещение левого верхнего угла иконки относительно
+				// её «ножки» (точки привязки).
+				iconImageOffset: [-35, -35]
+			});
+
+			var clusterer = new ymaps.Clusterer({
+				clusterDisableClickZoom: false,
+				clusterOpenBalloonOnClick: false,
+			});
+
+			clusterer.add(myGeoObjects);
+			myMap.geoObjects.add(clusterer);
+			// Отлючаем возможность изменения масштаба
+			myMap.behaviors.disable('scrollZoom');
+
+		}
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js?ver=5.1"></script>
+	<script src="js/all.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/vjik/arcticModal@master/arcticmodal/jquery.arcticmodal.js"></script>
+	<!-- Подключен файл-валидатор, для проверки формы на заполненность  -->
+	<script type="text/javascript"
+		src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+</body>
+
+</html>
