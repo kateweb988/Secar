@@ -32,6 +32,8 @@
       max-width: 70%
    .news__item:nth-child(3), .news__item:nth-child(4)
       width: 42.5%
+   .about .arrows
+      margin-right: -594px
 @media screen and (max-width: 1199px)
    .container
       max-width: 960px !important
@@ -80,7 +82,7 @@
    .info__item h4
       font-size: 30px
       line-height: 36px
-   .about
+   .about .swiper9 .swiper-slide
       padding: 100px 0 60px
    .about__content
       margin-top: 284px
@@ -242,10 +244,11 @@
    .card .swiper5 .swiper-slide img
       max-width: 100%
    .note
-      flex-direction: column 
+      background: url(/img/obv2.svg) no-repeat center center
+      flex-direction: column
       align-items: flex-start
       width: 375px
-      padding: 40px 30px
+      padding: 58.5px 30px
       left: 5%
       margin-left: 0
    .note__info
@@ -255,6 +258,8 @@
       width: 131px
    .note__close:nth-child(2)
       margin-left: 10px
+   .about .arrows
+      margin-right: -466px
 @media ( max-width: 991px )
    input, textarea, select
       -webkit-appearance: none
@@ -348,6 +353,8 @@
       width: auto
       height: auto
       bottom: 250px
+   .about .arrows 
+      margin-right: -364px
 @media screen and (max-width: 767px)
    h1 
       line-height: 54px
@@ -408,7 +415,8 @@
    .main
       padding: 51px 0 60px
    .main__fig1 
-      top: 223px
+      width: auto
+      top: 267px
       left: -130px
    .main__wrap h1
       margin-bottom: 343px
@@ -475,8 +483,8 @@
       &:nth-child(2), &:nth-child(4)
          img
             bottom: 60px
-   .about 
-      padding: 84px 0 60px
+   .about .swiper9 .swiper-slide
+      padding: 84px 0 107px
    .about__content
       margin-top: 268px
    .about__content p
@@ -596,6 +604,13 @@
       width: 100% !important
    .card__item:nth-child(3n)
       min-height: 338px
+   .about .arrows 
+      justify-content: center
+      margin: -82px auto 35px
+      margin-right: 0
+      right: 0
+      bottom: 0
+      position: relative
 @media screen and (max-width: 576px)
    .container
       max-width: 100% !important
@@ -693,6 +708,39 @@
    .thanks__content p
       font-size: 13px
       line-height: 33px
+   .info 
+      padding-bottom: 60px
+   .art-card .swiper6
+      overflow: visible
+   .catalog 
+      .tabs__nav 
+         &:after 
+            content: ""
+            display: inline-flex
+            flex: 1 0 auto 
+            width: 26px
+            max-width: 26px 
+            background: transparent
+      .container 
+         padding-right: 0
+         overflow: visible
+      .tabs__content 
+         padding-right: 26px
+   .info__item:after 
+      width: 99.1%
+      height: 96.2%
+      top: 4px
+      left: 0px
+      background: repeating-linear-gradient(90deg, #fff 0 20px, transparent 20px 27px) top left / calc(100% - 1px) 1px repeat-x, repeating-linear-gradient(90deg, #fff 0 20px, transparent 20px 27px) bottom left / calc(100% - 1px) 1px repeat-x, repeating-linear-gradient(180deg, #fff 0 20px, transparent 20px 27px) top left / 1px calc(100% - 1px) repeat-y, repeating-linear-gradient(180deg, #fff 0 20px, transparent 20px 27px) top right / 1px calc(100% - 1px) repeat-y
+   .note
+      background: white
+      &:after 
+         content: ""
+         position: absolute
+         inset: 0
+         padding: 2px
+         z-index: -1
+         background: repeating-linear-gradient(90deg,#000 0 20px,transparent 20px 30px) top/100% 1.5px no-repeat, repeating-linear-gradient(90deg,#000 0 20px, transparent 20px 30px) bottom/100% 1.5px no-repeat, repeating-linear-gradient(180deg,#000 0 20px,transparent 20px 30px) left/1.5px 100% no-repeat, repeating-linear-gradient(180deg,#000 0 20px, transparent 20px 30px) right/1.5px 100% no-repeat
 @media screen and (max-width: 391px)
    .area__item:first-child .area__title
       font-size: 40px

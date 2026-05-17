@@ -739,6 +739,7 @@ input:-moz-placeholder {
 
 .main {
   padding: 22px 0 145px;
+  position: relative;
 }
 .main__wrap {
   position: relative;
@@ -747,9 +748,10 @@ input:-moz-placeholder {
   margin-bottom: 451px;
 }
 .main__fig1 {
+  width: 100%;
   position: absolute;
-  top: 209px;
-  left: -85px;
+  top: 210px;
+  left: 0px !important;
 }
 .main__fig2 {
   position: absolute;
@@ -815,6 +817,21 @@ input:-moz-placeholder {
   border: 1px dashed transparent;
   position: relative;
   padding: 137px 60px 0;
+  overflow: hidden;
+}
+.info__item:after {
+  transition: 0.5s;
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  z-index: 0;
+  opacity: 0;
+  width: 99.1%;
+  height: 98.2%;
+  top: 5px;
+  left: 1px;
+  background: repeating-linear-gradient(90deg, #fff 0 20px, transparent 20px 27px) top left/calc(100% - 1px) 1px repeat-x, repeating-linear-gradient(90deg, #fff 0 20px, transparent 20px 27px) bottom left/calc(100% - 1px) 1px repeat-x, repeating-linear-gradient(180deg, #fff 0 20px, transparent 20px 27px) top left/1px calc(100% - 1px) repeat-y, repeating-linear-gradient(180deg, #fff 0 20px, transparent 20px 27px) top right/1px calc(100% - 1px) repeat-y;
 }
 .info__item .btn {
   opacity: 0;
@@ -852,8 +869,8 @@ input:-moz-placeholder {
   color: rgba(255, 255, 255, 0.44);
   letter-spacing: 2.8px;
 }
-.info__item:hover {
-  border: 1px dashed #ffffff;
+.info__item:hover:after {
+  opacity: 1;
 }
 .info__item:hover:before {
   opacity: 1;
@@ -1005,7 +1022,37 @@ input:-moz-placeholder {
 
 .about {
   position: relative;
+  overflow: hidden;
+}
+.about .arrows {
+  margin-right: -661px;
+  position: absolute;
+  bottom: 171px;
+  right: 50%;
+  z-index: 2;
+}
+.about .swiper9 {
+  position: relative;
+}
+.about .swiper9 .swiper-slide {
   padding: 143px 0 134px;
+  position: relative;
+}
+.about .swiper9 .swiper-slide:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+.about video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 .about__bg {
   position: absolute;
@@ -1055,6 +1102,7 @@ input:-moz-placeholder {
 }
 .about__wrap {
   position: relative;
+  z-index: 2;
 }
 .about__btn {
   width: 264px;
@@ -2404,7 +2452,8 @@ input.error {
   margin: 0px 0 0 41px;
 }
 .art-card .swiper6 {
-  width: 87%;
+  overflow: hidden;
+  width: 100%;
   margin-top: 20px;
 }
 .art-card .swiper6 .swiper-slide .catalog__item {
@@ -2436,10 +2485,10 @@ input.error {
   left: 50%;
   margin-left: -630px;
   overflow: hidden;
-  background: #FFFFFF;
-  border: 1px dashed #000000;
+  background: url(../img/obv1.svg) no-repeat center center;
   border-radius: 16px;
-  padding: 40px 30px;
+  padding: 51px 30px;
+  background-size: 100%;
 }
 .note__close {
   height: 100%;
@@ -2516,6 +2565,10 @@ input.error {
   margin-bottom: 30px;
 }
 
+.info__item:before {
+  display: none;
+}
+
 @media screen and (max-width: 1310px) {
   .container {
     max-width: 1200px !important;
@@ -2560,6 +2613,9 @@ input.error {
   }
   .news__item:nth-child(3), .news__item:nth-child(4) {
     width: 42.5%;
+  }
+  .about .arrows {
+    margin-right: -594px;
   }
 }
 @media screen and (max-width: 1199px) {
@@ -2628,7 +2684,7 @@ input.error {
     font-size: 30px;
     line-height: 36px;
   }
-  .about {
+  .about .swiper9 .swiper-slide {
     padding: 100px 0 60px;
   }
   .about__content {
@@ -2847,10 +2903,11 @@ input.error {
     max-width: 100%;
   }
   .note {
+    background: url(../img/obv2.svg) no-repeat center center;
     flex-direction: column;
     align-items: flex-start;
     width: 375px;
-    padding: 40px 30px;
+    padding: 58.5px 30px;
     left: 5%;
     margin-left: 0;
   }
@@ -2863,6 +2920,9 @@ input.error {
   }
   .note__close:nth-child(2) {
     margin-left: 10px;
+  }
+  .about .arrows {
+    margin-right: -466px;
   }
 }
 @media (max-width: 991px) {
@@ -2989,6 +3049,9 @@ input.error {
     height: auto;
     bottom: 250px;
   }
+  .about .arrows {
+    margin-right: -364px;
+  }
 }
 @media screen and (max-width: 767px) {
   h1 {
@@ -3064,7 +3127,8 @@ input.error {
     padding: 51px 0 60px;
   }
   .main__fig1 {
-    top: 223px;
+    width: auto;
+    top: 267px;
     left: -130px;
   }
   .main__wrap h1 {
@@ -3146,8 +3210,8 @@ input.error {
   .info__item:nth-child(2) img, .info__item:nth-child(4) img {
     bottom: 60px;
   }
-  .about {
-    padding: 84px 0 60px;
+  .about .swiper9 .swiper-slide {
+    padding: 84px 0 107px;
   }
   .about__content {
     margin-top: 268px;
@@ -3309,6 +3373,14 @@ input.error {
   .card__item:nth-child(3n) {
     min-height: 338px;
   }
+  .about .arrows {
+    justify-content: center;
+    margin: -82px auto 35px;
+    margin-right: 0;
+    right: 0;
+    bottom: 0;
+    position: relative;
+  }
 }
 @media screen and (max-width: 576px) {
   .container {
@@ -3443,6 +3515,45 @@ input.error {
   .thanks__content p {
     font-size: 13px;
     line-height: 33px;
+  }
+  .info {
+    padding-bottom: 60px;
+  }
+  .art-card .swiper6 {
+    overflow: visible;
+  }
+  .catalog .tabs__nav:after {
+    content: "";
+    display: inline-flex;
+    flex: 1 0 auto;
+    width: 26px;
+    max-width: 26px;
+    background: transparent;
+  }
+  .catalog .container {
+    padding-right: 0;
+    overflow: visible;
+  }
+  .catalog .tabs__content {
+    padding-right: 26px;
+  }
+  .info__item:after {
+    width: 99.1%;
+    height: 96.2%;
+    top: 4px;
+    left: 0px;
+    background: repeating-linear-gradient(90deg, #fff 0 20px, transparent 20px 27px) top left/calc(100% - 1px) 1px repeat-x, repeating-linear-gradient(90deg, #fff 0 20px, transparent 20px 27px) bottom left/calc(100% - 1px) 1px repeat-x, repeating-linear-gradient(180deg, #fff 0 20px, transparent 20px 27px) top left/1px calc(100% - 1px) repeat-y, repeating-linear-gradient(180deg, #fff 0 20px, transparent 20px 27px) top right/1px calc(100% - 1px) repeat-y;
+  }
+  .note {
+    background: white;
+  }
+  .note:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    z-index: -1;
+    background: repeating-linear-gradient(90deg, #000 0 20px, transparent 20px 30px) top/100% 1.5px no-repeat, repeating-linear-gradient(90deg, #000 0 20px, transparent 20px 30px) bottom/100% 1.5px no-repeat, repeating-linear-gradient(180deg, #000 0 20px, transparent 20px 30px) left/1.5px 100% no-repeat, repeating-linear-gradient(180deg, #000 0 20px, transparent 20px 30px) right/1.5px 100% no-repeat;
   }
 }
 @media screen and (max-width: 391px) {

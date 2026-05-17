@@ -263,14 +263,16 @@ input:-moz-placeholder
                background: $green !important
 .main 
    padding: 22px 0 145px
+   position: relative
    &__wrap 
       position: relative
       h1 
          margin-bottom: 451px
    &__fig1 
+      width: 100%
       position: absolute
-      top: 209px
-      left: -85px
+      top: 210px
+      left: 0px !important
    &__fig2
       position: absolute
       bottom: -145px
@@ -326,6 +328,20 @@ input:-moz-placeholder
       border: 1px dashed transparent
       position: relative
       padding: 137px 60px 0
+      overflow: hidden
+      &:after 
+         transition: 0.5s
+         content: ""
+         position: absolute
+         inset: 0
+         padding: 2px
+         z-index: 0
+         opacity: 0
+         width: 99.1%
+         height: 98.2%
+         top: 5px
+         left: 1px
+         background: repeating-linear-gradient(90deg, #fff 0 20px, transparent 20px 27px) top left / calc(100% - 1px) 1px repeat-x, repeating-linear-gradient(90deg, #fff 0 20px, transparent 20px 27px) bottom left / calc(100% - 1px) 1px repeat-x, repeating-linear-gradient(180deg, #fff 0 20px, transparent 20px 27px) top left / 1px calc(100% - 1px) repeat-y, repeating-linear-gradient(180deg, #fff 0 20px, transparent 20px 27px) top right / 1px calc(100% - 1px) repeat-y
       .btn 
          opacity: 0
          position: absolute
@@ -359,7 +375,8 @@ input:-moz-placeholder
          color: rgba(255,255,255,0.44)
          letter-spacing: 2.8px
       &:hover 
-         border: 1px dashed #ffffff
+         &:after 
+            opacity: 1
          &:before 
             opacity: 1
          img 
@@ -485,7 +502,32 @@ input:-moz-placeholder
    opacity: 0.5
 .about 
    position: relative
-   padding: 143px 0 134px
+   overflow: hidden
+   .arrows 
+      margin-right: -661px
+      position: absolute
+      bottom: 171px
+      right: 50%
+      z-index: 2
+   .swiper9
+      position: relative
+      .swiper-slide 
+         padding: 143px 0 134px
+         position: relative
+         &:after
+            content: ""
+            position: absolute
+            inset: 0
+            background: rgba(0,0,0,.35)
+            z-index: 1
+   video
+      position: absolute
+      width: 100%
+      height: 100%
+      object-fit: cover
+      top: 0
+      left: 0
+      z-index: 0
    &__bg 
       position: absolute
       top: 0
@@ -528,6 +570,7 @@ input:-moz-placeholder
          background: url(/img/fig4.svg) no-repeat center center
    &__wrap 
       position: relative
+      z-index: 2
    &__btn 
       width: 264px
       position: absolute
@@ -1660,7 +1703,8 @@ input.error
       max-width: 96%
       margin: 0px 0 0 41px
    .swiper6 
-      width: 87%
+      overflow: hidden
+      width: 100%
       margin-top: 20px
       .swiper-slide 
          .catalog__item
@@ -1687,10 +1731,10 @@ input.error
    left: 50%
    margin-left: -630px
    overflow: hidden
-   background: #FFFFFF
-   border: 1px dashed #000000
+   background: url(/img/obv1.svg) no-repeat center center
    border-radius: 16px
-   padding: 40px 30px
+   padding: 51px 30px
+   background-size: 100%
    &__close 
       height: 100%
       cursor: pointer
@@ -1751,7 +1795,8 @@ input.error
          color: #FFFFFF
       h1 
          margin-bottom: 30px
-
+.info__item:before
+   display: none
 
 
 

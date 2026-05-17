@@ -332,6 +332,44 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
+  const swiper9 = new Swiper('.swiper9', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    speed: 1200,
+
+    navigation: {
+      nextEl: '.swiper-button-next9',
+      prevEl: '.swiper-button-prev9',
+    },
+
+    on: {
+      init: function () {
+        playActiveVideo(this);
+      },
+
+      slideChangeTransitionEnd: function () {
+        playActiveVideo(this);
+      }
+    }
+  });
+
+  function playActiveVideo(swiper) {
+
+    const videos = document.querySelectorAll('.about__video');
+
+    videos.forEach(video => {
+      video.pause();
+      video.currentTime = 0;
+    });
+
+    const activeSlide = swiper.slides[swiper.activeIndex];
+    const activeVideo = activeSlide.querySelector('.about__video');
+
+    if (activeVideo) {
+      activeVideo.play();
+    }
+  }
 });
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -417,6 +455,7 @@ document.querySelectorAll('.catalog__item').forEach((item) => {
     },
   });
 });
+
 document.addEventListener("DOMContentLoaded", () => {
   const note = document.getElementById("note1");
   const buttons = note.querySelectorAll(".note__close");
